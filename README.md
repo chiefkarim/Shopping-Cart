@@ -1,2 +1,2 @@
 # Shopping-Cart
-Live demo
+Live demo https://chiefkarim.github.io/Shopping-Cart
