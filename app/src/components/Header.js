@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/styles/header.css";
-function Header() {
+function Header(props) {
   window.onscroll = function () {
     scrollFunction();
   };
@@ -11,20 +11,20 @@ function Header() {
       document.documentElement.scrollTop > 80
     ) {
       document.querySelector(".headerWrapper").style =
-        "background:#efefef;color:#1c1b1b";
+        "background:#ffffff;color:#1c1b1b";
     } else {
       document.querySelector(".headerWrapper").style =
-        "background:transparent;color:#efefef";
+        "background:transparent;color:#ffffff";
     }
   }
   return (
-    <header>
+    <header style={{ background: props.style, backgroundSize: "cover" }}>
       <div className="headerWrapper">
         <div className="nav">
           <ul>
             <li>
               <h1>
-                <a href="#">Shop</a>
+                <a href="/shop">Shop</a>
               </h1>
             </li>
 
@@ -43,14 +43,14 @@ function Header() {
         </div>
         <div className="logo">
           <h1>
-            <a href="#">Prestige</a>
+            <a href="/">Prestige</a>
           </h1>
         </div>
         <div className="cart">
           <svg
             width="25px"
             height="25px"
-            class="Icon Icon--cart "
+            className="Icon Icon--cart "
             role="presentation"
             viewBox="0 0 17 20"
           >

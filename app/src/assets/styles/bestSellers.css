@@ -4,13 +4,13 @@ body{
 .bestSeller{
     background: #efefef;
     font-size: 12px;
-    font-family:Montserrat, sans-serif; 
     font-style: normal;
     text-align: center;
     color:#1c1b1b;
     padding:0 80px;
     margin-bottom: 70px
     }
+   
 section{
     padding:80px 0;
     margin-bottom: 70px;
@@ -18,12 +18,8 @@ section{
 .sectionHeader{
 
         text-size-adjust: 100%;
-    font-size: var(--base-text-font-size);
-   
-    font-family: var(--text-font-family);
-    font-weight: var(--text-font-weight);
-    font-style: var(--text-font-style);
-    color: var(--text-color);
+
+
     line-height: 1.65;
     text-align: center;
     box-sizing: border-box!important;
@@ -47,15 +43,48 @@ button{
     letter-spacing: .2em;
     font-size: 20px;
 }
+@keyframes slidein {
+    from { transform: translateY(+220px); opacity:0; -webkit-transform: translateY(+220px); -moz-transform: translateY(+220px); -ms-transform: translateY(+220px); -o-transform: translateY(+220px); }
+    to { transform: translateY(0px); opacity: 1; -webkit-transform: translateY(0px); -moz-transform: translateY(0px); -ms-transform: translateY(0px); -o-transform: translateY(0px); }
+  }
+ @keyframes slideout {
+    from { display: block ;  }
+    to { transform: translateY(-220px); opacity: 0; -webkit-transform: translateY(-220px); -moz-transform: translateY(-220px); -ms-transform: translateY(-220px); -o-transform: translateY(-220px); }
+  }
+
 .menWrapper{
-    height: 629px;
+    height: 500px;
     padding: 0 100px;
+   
 }
 .itemsList{
     display: flex;
     justify-content: space-between;
     
 }
+.showProducts>a{
+     position: relative;
+     display: inline-block;
+     padding: 14px 28px;
+     line-height: normal;
+     border: 1px solid transparent;
+     border-radius: 0;
+     text-transform: uppercase;
+     text-align: center;
+     letter-spacing: .2em;
+     background-color: transparent;
+     z-index: 1;
+     color: white;
+     background-color: #1c1b1b;
+     cursor: pointer;
+}
+.showProducts{
+    display: flex;
+    justify-content: center;
+}
+
+
+
 .item{
     text-align: center;
 }
@@ -70,12 +99,12 @@ cursor: pointer;
 }
 .box{
     position: relative;
-    width:232px;
-    height:273px;
+    width:267px;
+    height:337px;
 }
 .box img{
- width:232px;
- height:273px;
+ width:100%;
+ height:100%;
 position: absolute;
 left: 0;
  transition: opacity .3s ease-in-out;

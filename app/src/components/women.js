@@ -1,20 +1,19 @@
 import images from "./images";
 import uniqid from "uniqid";
-import { Link } from "react-router-dom";
-function Men(props) {
+
+function women(props) {
   let first = "";
   let second = "";
   let name = "";
   let price = "";
   const content = [];
-  for (let item in images.men) {
+  for (let item in images.women) {
     if (item.includes("01")) {
-      first = images.men[item].value;
-      name = images.men[item].name;
-      price = images.men[item].price;
+      first = images.women[item].value;
+      name = images.women[item].name;
+      price = images.women[item].price;
     } else if (item.includes("03")) {
-      second = images.men[item];
-
+      second = images.women[item];
       content.push(
         <div className="item" key={uniqid()}>
           <a href="#">
@@ -24,7 +23,7 @@ function Men(props) {
             </div>
           </a>
           <h2>
-            <Link to={`/shop/${item}`}> {name}</Link>
+            <a href="#">{name}</a>
           </h2>
           <h3>{price}</h3>
         </div>
@@ -47,4 +46,4 @@ function Men(props) {
     </div>
   );
 }
-export default Men;
+export default women;
