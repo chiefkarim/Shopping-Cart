@@ -1,5 +1,7 @@
 import React from "react";
 import "../assets/styles/header.css";
+import { Link } from "react-router-dom";
+
 function Header(props) {
   window.onscroll = function () {
     scrollFunction();
@@ -24,7 +26,7 @@ function Header(props) {
           <ul>
             <li>
               <h1>
-                <a href="/shop">Shop</a>
+                <Link to={`/shop`}>Shop</Link>
               </h1>
             </li>
 
