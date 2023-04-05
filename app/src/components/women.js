@@ -1,5 +1,6 @@
 import images from "./images";
 import uniqid from "uniqid";
+import { Link } from "react-router-dom";
 
 function women(props) {
   let first = "";
@@ -23,7 +24,10 @@ function women(props) {
             </div>
           </a>
           <h2>
-            <a href="#">{name}</a>
+            <Link to={`/shop/${item}`} state="women">
+              {" "}
+              {name}
+            </Link>
           </h2>
           <h3>{price}</h3>
         </div>

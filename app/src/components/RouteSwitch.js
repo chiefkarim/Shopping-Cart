@@ -1,19 +1,19 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import App from "../App";
 import Shop from "./shop";
-import { useMatch } from "react-router-dom";
-
 import Product from "./product";
+
+
 function RouterSwitch() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/shop/:id" element={<Product />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 export default RouterSwitch;

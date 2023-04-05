@@ -1,12 +1,16 @@
 import { useParams } from "react-router-dom";
 import images from "./images";
 import Header from "./Header";
+import { useLocation } from "react-router-dom";
+
 function Product(props) {
+  const location = useLocation();
+
   const params = useParams().id;
-  const first = images.men[params.replace("03", "01")].value;
-  const second = images.men[params];
-  const name = images.men[params.replace("03", "01")].name;
-  const price = images.men[params.replace("03", "01")].price;
+  const first = images[location.state][params.replace("03", "01")].value;
+  const second = images[location.state][params];
+  const name = images[location.state][params.replace("03", "01")].name;
+  const price = images[location.state][params.replace("03", "01")].price;
   return (
     <>
       <Header />

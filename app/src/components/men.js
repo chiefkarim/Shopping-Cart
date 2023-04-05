@@ -24,7 +24,10 @@ function Men(props) {
             </div>
           </a>
           <h2>
-            <Link to={`/shop/${item}`}> {name}</Link>
+            <Link to={`/shop/${item}`} state="men">
+              {" "}
+              {name}
+            </Link>
           </h2>
           <h3>{price}</h3>
         </div>
