@@ -2,6 +2,7 @@ import "../assets/styles/bestSellers.css";
 import Men from "./men";
 import Women from "./women";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 function BestSellers() {
   const [style, setStyle] = useState({ men: "block", women: "none" });
   return (
@@ -29,7 +30,7 @@ function BestSellers() {
         </div>
         <Men style={style.men} /> <Women style={style.women} />
         <div className="showProducts">
-          <a href="/shop">Shop all</a>
+          <Link to={`/shop`}>Shop</Link>
         </div>
       </div>
     </section>

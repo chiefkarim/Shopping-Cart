@@ -4,10 +4,14 @@ import "./components/Header";
 import Header from "./components/Header";
 import BestSellers from "./components/bestSellers";
 import "./assets/font/static/Montserrat-Regular.ttf";
-function App() {
+import { useEffect } from "react";
+function App(props) {
+  const productList = props.state.productList;
+  const setProductList = props.state.setProductList;
+
   return (
     <>
-      <Header />
+      <Header state={{ productList, setProductList }} />
       <BestSellers />
     </>
   );

@@ -24,7 +24,7 @@ function women(props) {
             </div>
           </a>
           <h2>
-            <Link to={`/shop/${item}`} state="women">
+            <Link to={`/shop/${item.replace("03", "01")}`} state="women">
               {" "}
               {name}
             </Link>
