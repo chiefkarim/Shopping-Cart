@@ -51,6 +51,11 @@ function Header(props) {
   function decrement(item) {
     for (let i = 0; i < productList.length; i++) {
       if (productList[i].name === item.name) {
+        if (productList[i].value - 1 < 1) {
+          productList.pop(i);
+          setProductList([...productList]);
+          return;
+        }
         productList[i].value = productList[i].value - 1;
         setProductList([...productList]);
       }
