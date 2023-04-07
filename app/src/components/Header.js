@@ -56,7 +56,14 @@ function Header(props) {
       }
     }
   }
-
+  function remove(item) {
+    for (let i = 0; i < productList.length; i++) {
+      if (productList[i].name === item.name) {
+        productList.pop(i);
+        setProductList([...productList]);
+      }
+    }
+  }
   return (
     <>
       <div
@@ -98,6 +105,7 @@ function Header(props) {
                     <h2>{item.value}</h2>
                     <button onClick={() => decrement(item)}>-</button>
                   </div>
+                  <button onClick={() => remove(item)}>Remove</button>
                 </div>
               </div>
             );
