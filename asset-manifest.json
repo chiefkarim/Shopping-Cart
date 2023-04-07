@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Shopping-Cart/static/css/main.ca1c34fd.css",
-    "main.js": "/Shopping-Cart/static/js/main.4e0d982c.js",
+    "main.css": "/Shopping-Cart/static/css/main.7c4a1d11.css",
+    "main.js": "/Shopping-Cart/static/js/main.5091bdd3.js",
     "static/js/787.c1112931.chunk.js": "/Shopping-Cart/static/js/787.c1112931.chunk.js",
     "static/media/header.jpg": "/Shopping-Cart/static/media/header.75128b1b2a12291007e9.jpg",
     "static/media/shop-collection_1400x.jpg": "/Shopping-Cart/static/media/shop-collection_1400x.abd79ae1099d23e8da99.jpg",
@@ -40,12 +40,12 @@
     "static/media/Elegant-Bag-Noir-02_700x.jpg": "/Shopping-Cart/static/media/Elegant-Bag-Noir-02_700x.887157953067b632ccc8.jpg",
     "static/media/Elegant-Bag-Noir-01_700x.jpg": "/Shopping-Cart/static/media/Elegant-Bag-Noir-01_700x.4c59df8fee18ca9e6da9.jpg",
     "index.html": "/Shopping-Cart/index.html",
-    "main.ca1c34fd.css.map": "/Shopping-Cart/static/css/main.ca1c34fd.css.map",
-    "main.4e0d982c.js.map": "/Shopping-Cart/static/js/main.4e0d982c.js.map",
+    "main.7c4a1d11.css.map": "/Shopping-Cart/static/css/main.7c4a1d11.css.map",
+    "main.5091bdd3.js.map": "/Shopping-Cart/static/js/main.5091bdd3.js.map",
     "787.c1112931.chunk.js.map": "/Shopping-Cart/static/js/787.c1112931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca1c34fd.css",
-    "static/js/main.4e0d982c.js"
+    "static/css/main.7c4a1d11.css",
+    "static/js/main.5091bdd3.js"
   ]
 }
