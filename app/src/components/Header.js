@@ -52,7 +52,7 @@ function Header(props) {
     for (let i = 0; i < productList.length; i++) {
       if (productList[i].name === item.name) {
         if (productList[i].value - 1 < 1) {
-          productList.pop(i);
+          productList.splice(i, 1);
           setProductList([...productList]);
           return;
         }
@@ -64,7 +64,7 @@ function Header(props) {
   function remove(item) {
     for (let i = 0; i < productList.length; i++) {
       if (productList[i].name === item.name) {
-        productList.pop(i);
+        productList.splice(i, 1);
         setProductList([...productList]);
       }
     }
