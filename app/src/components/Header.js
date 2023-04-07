@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/styles/header.css";
 import { Link } from "react-router-dom";
+import images from "./images";
 function overlay() {
   const overlay = document.querySelector(".overlay");
   const cart = document.querySelector(".cart");
@@ -39,6 +40,22 @@ function Header(props) {
         "background:transparent;color:#ffffff";
     }
   }
+  function increment(item) {
+    for (let i = 0; i < productList.length; i++) {
+      if (productList[i].name === item.name) {
+        productList[i].value = productList[i].value + 1;
+        setProductList([...productList]);
+      }
+    }
+  }
+  function decrement(item) {
+    for (let i = 0; i < productList.length; i++) {
+      if (productList[i].name === item.name) {
+        productList[i].value = productList[i].value - 1;
+        setProductList([...productList]);
+      }
+    }
+  }
 
   return (
     <>
@@ -66,11 +83,26 @@ function Header(props) {
             </svg>
           </button>
         </div>
-        <h1>
+        <div className="cartContent">
+          {/* `${item.name} ${item.value}`*/}
           {productList.map((item) => {
-            return `${item.name} ${item.value}`;
+            return (
+              <div className="cartItem">
+                <img src={item.img} />
+                <div className="cartInfo">
+                  <h2>{item.name}</h2>
+
+                  <h2>{item.price}</h2>
+                  <div className="itemAmount">
+                    <button onClick={() => increment(item)}>+</button>
+                    <h2>{item.value}</h2>
+                    <button onClick={() => decrement(item)}>-</button>
+                  </div>
+                </div>
+              </div>
+            );
           })}
-        </h1>
+        </div>
       </div>
       <header style={{ background: props.style, backgroundSize: "cover" }}>
         <div className="headerWrapper">

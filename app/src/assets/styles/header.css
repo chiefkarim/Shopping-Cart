@@ -139,3 +139,27 @@ color:inherit
     width:15px;
     height:15px
 }
+.cartContent{
+display: flex;
+flex-direction: column;
+height: 80%;
+width: 100%;
+}
+.cartItem{
+    display: flex;
+    align-items: center;
+    height: 30%;
+}
+.cartItem>img{
+    width:30%;
+    min-width: 120px;
+       
+}
+.itemAmount{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    border: .5px solid gray;
+align-items: center;
+font-size: larger;
+    }
+    

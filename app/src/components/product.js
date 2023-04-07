@@ -15,7 +15,13 @@ function Product(props) {
 
   function add(name) {
     setProductList((products) => {
-      return [...products, { name: name, value: 1 }];
+      for (let i = 0; i < products.length; i++) {
+        if (products[i].name === name) {
+          console.log([products]);
+          return [...products];
+        }
+      }
+      return [...products, { name: name, value: 1, img: first, price: price }];
     });
   }
   return (
